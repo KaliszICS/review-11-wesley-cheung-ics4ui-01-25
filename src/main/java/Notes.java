@@ -17,6 +17,7 @@ class Notes {
 
 		numArray[0] = 5;
 		System.out.println(numArray[1]);
+		System.out.println(numArray);
 
 		//looking through an array
 
@@ -30,7 +31,7 @@ class Notes {
 		}
 
 		int num = 13;
-		int index = -1;
+		int index = -1; //default for if you don't find it
 		//  {13, 11, 13}
 		for (int i = 0; i < numArray.length; i++) { // finds the last occurrence
 			if (numArray[i] == num) {
@@ -48,8 +49,17 @@ class Notes {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 		}
+
+		//copy an array
+
+		String[] copyArr = new String[arr.length];
+
+		for (int i= 0; i < arr.length; i++) {
+			copyArr[i] = arr[i];
+		}
 	}
 
+	// arr = value that is provided
 	public static void firstElementA(String[] arr) {
 		//any array modifications will alter the array outside of the function
 		//arrays don't to return anything if they are altering
